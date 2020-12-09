@@ -1,0 +1,36 @@
+<!--student_index.wxml-->
+<view class="courseinfo">
+    <text class="course-name">课程:{{course_info.name}}\n</text>
+    <text class="course-time">时间:{{course_info.course_time}}\n</text>
+    <text class="course-teacher">任课教师:{{course_info.teacher_name}}\n</text>
+    <text class="course-ddl">组队开始日期:{{course_info.start_time}}\n</text>
+    <text class="course-ddl">组队截止日期:{{course_info.end_time}}\n\n</text>
+</view>
+
+<view class="button-list">
+    <button type="primary" size="mini" bindtap="create_team">创建队伍</button>
+    <modal hidden="{{hidden_modal}}" title='请问您是否要创建队伍' confirm-text="提交" cancel-text="取消" bindcancel="modal_cancel" bindconfirm="modal_confirm">  
+        <input type='text' bindinput='input_typing' placeholder="请输入队伍信息" value="{{newteam_team_info}}"/>
+        <input type='text' bindinput='input_typing_number' placeholder="请输入队伍人数" value="{{newteam_max_num}}"/>
+    </modal>
+    <button type="primary" size="mini" bindtap="quick_add">快速匹配</button>
+    <button type="warn" size="mini" bindtap="quit_course">退出课程</button>
+</view>
+
+<view class="myteam" bindtap="check_myteam">
+    <text>我的队伍编号:{{my_team.team_id}}\n</text>
+    <text>队长:{{my_team.team_leader}}\n</text>
+    <text>队伍信息:{{my_team.team_info}}\n</text>
+    <text>队员信息:</text>
+    <text wx:for="{{my_team.team_members}}">{{item}}\t</text>
+    <text>\n\n</text>
+</view>
+
+<view class="team-list" bindtap="join_team" data-index="{{index}}" wx:for="{{team_list}}" wx:key="id">
+    <text>队伍编号:{{item.team_id}}\n</text>
+    <text>队长:{{item.team_leader}}\n</text>
+    <text>队伍信息:{{item.team_info}}\n</text>
+    <!--image class="teammate-avatar" src="{{item.avatar}}" background-size="cover"></image-->
+    <text>最大人数:{{item.max_team}}\n</text>
+    <text>空位人数:{{item.available_team}}\n\n</text>
+</view>

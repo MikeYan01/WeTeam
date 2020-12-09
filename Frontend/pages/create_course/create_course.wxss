@@ -1,0 +1,72 @@
+.hint {
+  font-size: 50rpx;
+  margin-bottom: 50rpx;
+  font-weight: bold;
+}
+
+.input {
+  background-color: white;
+}
+
+.courseName {
+  margin-left: 25%;
+  margin-top: -6%;
+  border:  1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.courseTime {
+  margin-top: 10%;
+}
+
+
+.minTeam, .maxTeam {
+  margin-top: -6%;
+  margin-left: 25%;
+  border:  1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.picker {
+  margin-top: 2%;
+  line-height: 70rpx;
+  border:  1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.startEndTime {
+  margin-top: 10%;
+  line-height: 70rpx;
+}
+
+.teamNum {
+  margin-top: 10%;
+}
+
+.course_info {
+  margin-top: 10%;
+}
+
+.courseInfo {
+  border:  1px solid rgb(185, 185, 185);
+  border-radius: 5px;
+}
+
+.cfmBtn {
+  margin-top: 10%;
+  background-color: rgb(81, 170, 56); 
+  color:white;
+  width: 280px;
+  margin-bottom: 10%;
+}
+
+.underline {
+  width: 100%; 
+  margin-top: 5%;
+  height: 1px;
+  background-color: rgb(185, 185, 185); 
+}
+
+.title {
+  font-weight: bold;
+}

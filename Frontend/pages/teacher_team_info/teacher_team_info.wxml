@@ -1,0 +1,14 @@
+<!--pages/teacher_team_info/teacher_team_info.wxml-->
+<text class='team_info'>队伍详情：{{team_info}}\n</text>
+<text class='current_team'>当前队伍人数：{{max_team - available_team}}\n</text>
+<text class='available_team'>剩余空位人数：{{available_team}}\n</text>
+<view class='team_leader'>
+  <image class='photo' src='{{leader.avatarUrl}}' mode='cover'></image>
+  <view class='team_leader_id'>{{leader.id}}</view>
+  <view class='team_leader_name'>{{leader.name}}</view>
+</view>
+<view class='team_photo' wx:for="{{team_members}}" wx:key="{{item.id}}" bindtap='chooseMember' data-id='{{item.id}}'>
+  <image class='photo' src='{{item.avatarUrl}}' mode='cover'></image>
+  <view class='team_member_id'>{{item.id}}</view>
+  <view class='team_member_name'>{{item.name}}</view>
+</view>

@@ -1,0 +1,29 @@
+<!--login.wxml-->
+<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+</view>
+
+<view class="hint">默认密码为学工号+'010'</view>
+<view class="underline"></view>
+
+<view class="logininfo">
+    用户名
+    <input class="input" name = "username" placeholder="请输入真实姓名" bindinput="userNameInput"></input>
+
+    <view class="line"></view>
+
+    学工号
+    <input class="input" name = "student_id" placeholder="请输入学号/工号" bindinput="userNumInput"></input>
+
+    <view class="line"></view>
+
+    密码
+    <input class="input" name = "password" placeholder="请输入密码" bindinput="passWdInput" password='true'></input>
+</view>
+
+<view class="buttoninfo">
+    <button class="loginBtn" bindtap='loginBtnClick' form-type='submit'>注册/登录</button>
+</view>
+

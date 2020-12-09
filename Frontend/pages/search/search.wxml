@@ -1,0 +1,8 @@
+<!--pages/search/search.wxml-->
+<view class="courseinfo" bindtap="check_course" data-index="{{index}}" wx:for="{{course_list}}" wx:key="id">
+    <text class="course-name">课程:{{item.name}}\n</text>
+    <text class="course-time">时间:{{item.course_time}}\n</text>
+    <text class="course-teacher">任课教师:{{item.teacher_name}}\n</text>
+    <text class="course-ddl">组队开始日期:{{item.start_time}}\n</text>
+    <text class="course-ddl">组队截止日期:{{item.end_time}}\n\n</text>
+</view>

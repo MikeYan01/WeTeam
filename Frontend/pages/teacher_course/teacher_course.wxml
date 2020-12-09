@@ -1,0 +1,28 @@
+<!--pages/teacher_course/teacher_course.wxml-->
+<view class="hint">
+  <text>{{name}}</text>
+  <image class="img_modify" src="modify.png" bindtap='modify_info'></image>
+</view>
+
+<view class="courseinfo">
+  {{course_info}}
+</view>
+
+<view class = "line"></view>
+
+<view class="printGroup">
+    <text class="print">组队信息</text>
+    <image class="img_print" src="print.png" bindtap='printGroup'></image>
+</view>
+
+<view class="teaminfo" bindtap="check_team" wx:for="{{team_list}}" data-id="{{item.team_id}}">
+    <text class="member_name">成员学号: {{item.team_members_id}}\n</text>
+    <text class="available_team">当前人数: {{item.max_team - item.available_team}}\n</text>
+    <text class="available_team">空位人数: {{item.available_team}}\n</text>
+    <view class = "line"></view>
+</view>
+
+
+<view class="buttoninfo">
+    <button class="deleteBtn" bindtap='deleteCourse'>删除课程</button>  
+</view>

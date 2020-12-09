@@ -1,0 +1,64 @@
+<!--pages/create_course/create_course.wxml-->
+<view class="hint">创建课程</view>
+
+<view class="info">
+  <text class = 'title'>课程名字</text>
+  <input class="courseName" name = "name" placeholder="请输入课程名" bindinput="bindCourseName"></input>
+
+  <!-- 上课时间被拆分成了多个picker -->
+  <view class="courseTime">
+    <text class = 'title'>上课时间</text>
+    <picker bindchange="bindPickerChange1" value="{{index1}}" range="{{array1}}">
+      <view class="picker">
+      点击选择星期几：{{array1[index1]}}
+      </view>
+    </picker>
+
+    <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+      <view class="picker">
+      点击选择起始节数：{{array2[index2]}}
+      </view>
+    </picker>
+
+    <picker bindchange="bindPickerChange3" value="{{index3}}" range="{{array3}}">
+      <view class="picker">
+      点击选择终止节数：{{array3[index3]}}
+      </view>
+    </picker>
+  </view>
+
+  <!-- 组队时间被拆分成了多个picker -->
+  <view class="startEndTime">
+    <text class = 'title'>组队起止时间</text>
+    <picker mode="date" value="{{start_time}}" start="2015-09-01" end="2030-09-01" bindchange="bindDateChange1">
+      <view class="picker">
+        点击选择组队开始时间: {{start_time}}
+      </view>
+    </picker>
+
+    <picker mode="date" value="{{end_time}}" start="2015-09-01" end="2030-09-01" bindchange="bindDateChange2">
+      <view class="picker">
+        点击选择组队截止时间: {{end_time}}
+      </view>
+    </picker>
+  </view>
+
+
+  <view class = "teamNum">
+    <text class = 'title'>组队人数限制</text>
+    <view>最小人数：</view>
+    <input class="minTeam" name = "min_team" placeholder="请输入最小人数要求" bindinput="bindMinPeople"></input>
+    <view>最大人数：</view>
+    <input class="maxTeam" name = "max_team" placeholder="请输入最大人数要求" bindinput="bindMaxPeople">最大人数</input>
+  </view>
+
+
+  <view class = "course_info">
+    <text class = 'title'>课程组队说明</text>
+    <input class="courseInfo" name = "course_info" placeholder="请输入课程组队说明" bindinput="bindCourseInfo"></input>
+  </view>
+
+  <view class="buttoninfo">
+    <button class="cfmBtn" bindtap='cfmBtnClick'>确认创建</button>
+  </view>
+</view>

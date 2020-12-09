@@ -1,0 +1,32 @@
+<!--pages/leader_info/leader_info.wxml-->
+<text class='team_info'>队伍详情：{{team_info}}\n</text>
+<text class='current_team'>当前队伍人数：{{max_team - available_team}}\n</text>
+<text class='available_team'>剩余空位人数：{{available_team}}\n</text>
+<view class='team_leader'>
+  <image class='photo' src='{{leader.avatarUrl}}' mode='cover'></image>
+  <view class='team_leader_id'>{{leader.id}}</view>
+  <view class='team_leader_name'>{{leader.name}}</view>
+</view>
+<view id="{{index}}" wx:for="{{team_members}}" wx:key="{{item.id}}" bindtap='chooseMember' data-index="{{index}}" data-id='{{item.id}}'>
+  <block wx:if="{{index == clickId}}">
+    <view class='is_checked'>
+      <image class='photo' src='{{item.avatarUrl}}' mode='cover'></image>
+      <view class='team_member_id'>{{item.id}}</view>
+      <view class='team_member_name'>{{item.name}}</view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='normal'>
+      <image class='photo' src='{{item.avatarUrl}}' mode='cover'></image>
+      <view class='team_member_id'>{{item.id}}</view>
+      <view class='team_member_name'>{{item.name}}</view>
+    </view>
+  </block>
+</view>
+
+
+<view class='bottomBar'>
+  <button class='delete_member' disabled='{{!hasTapped}}' bindtap="deleteMember">踢出此人</button>
+  <button class='quit_team' bindtap="quitTeam">退出队伍</button>
+  <button class='dissolve_team' bindtap="dissolveTeam">解散队伍</button>
+</view>

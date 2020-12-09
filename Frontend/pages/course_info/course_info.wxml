@@ -1,0 +1,8 @@
+<!--pages/course_info/course_info.wxml-->
+<view class="input">
+  <input name = "courseInfo" placeholder="请输入新的课程说明" bindinput="courseInfoInput"></input>
+</view>
+
+<view class="confirm">
+    <button class="confirm" bindtap='confirm'>确认</button>
+</view>

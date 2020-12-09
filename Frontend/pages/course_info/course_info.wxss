@@ -1,0 +1,14 @@
+/* pages/course_info/course_info.wxss */
+ .input {
+  margin-top: 5%;
+  height: 30%;
+  width: 100%;
+} 
+
+.confirm {
+  margin-top: 50%;
+  margin-left: 5%;
+  background-color: rgb(81, 170, 56); 
+  color:white;
+  width: 90%;
+}

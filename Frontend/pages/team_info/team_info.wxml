@@ -1,0 +1,5 @@
+<!--pages/team_info/team_info.wxml-->
+
+<include src = '../teacher_team_info/teacher_team_info.wxml'/>
+<button class='join_team' wx:if="{{hasJoin}}" bindtap="quitTeam">退出队伍</button>
+<button class='join_team' wx:else bindtap="joinTeam" disabled="{{isFull}}">加入队伍</button>

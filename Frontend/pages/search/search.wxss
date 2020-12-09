@@ -1,0 +1,11 @@
+/* pages/search/search.wxss */
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.courseinfo {
+    background-color: white;
+}

@@ -1,0 +1,24 @@
+{
+    "pages": [
+        "pages/login/login",
+        "pages/student_index/student_index",
+        "pages/team_info/team_info",
+        "pages/student_course/student_course",
+        "pages/teacher_index/teacher_index",
+        "pages/teacher_course/teacher_course",
+        "pages/create_course/create_course",
+        "pages/logs/logs",
+        "pages/group_info/group_info",
+        "pages/course_info/course_info",
+        "pages/leader_info/leader_info",
+        "pages/search/search",
+        "pages/teacher_team_info/teacher_team_info"
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true
+    }
+}

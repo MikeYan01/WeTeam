@@ -1,0 +1,22 @@
+<!--pages/teacher_index/teacher_index.wxml-->
+<view class="userinfo">
+    <image class="userinfo-avatar" src="{{avatar_url}}" background-size="cover"></image>
+    <text class="userinfo-nickname">你好，{{username}}</text>
+</view>
+
+<view class="buttoninfo">
+    <button class="createBtn" bindtap='createCourse'>创建课程</button>
+</view>
+
+<view class="underline"></view> 
+
+<view class="created">已创建课程列表</view>
+
+<view class="courseinfo" bindtap="check_course" wx:for="{{course_list}}" data-id="{{item.id}}">
+    <text class="course-name">课程:{{item.name}}\n</text>
+    <text class="course-time">时间:{{item.course_time}}\n</text>
+    <text class="course-start">组队开始日期:{{item.start_time}}\n</text>
+    <text class="course-ddl">组队截止日期:{{item.end_time}}\n</text>
+
+    <view class = "line"></view>        
+</view>

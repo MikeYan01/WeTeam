@@ -1,0 +1,6 @@
+<view class="teaminfo" bindtap="check_team" wx:for="{{team_list}}">
+    <text class="member_name">成员学号: {{item.team_members_id}}\n</text>
+    <text class="available_team">当前人数: {{item.max_team - item.available_team}}\n</text>
+    <text class="available_team">空位人数: {{item.available_team}}\n</text>
+    <view class = "line"></view>
+</view>
